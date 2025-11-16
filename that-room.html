@@ -2,7 +2,7 @@
   <head>
     <style>
       .cube {
-        width:200px;
+        width:400px;
         height:200px;
         position:relative;
         transform-style:preserve-3d;
@@ -11,7 +11,7 @@
 
       .face {
         position:absolute;
-        width:200px;
+        width:400px;
         height:200px;
         border:2px solid black;
         display:flex;
@@ -24,8 +24,8 @@
       .back   { transform: translateZ(-100px) rotateY(180deg) scaleX(-1); }
       .right  { transform: rotateY(90deg) translateZ(100px) scaleX(-1); }
       .left   { transform: rotateY(-90deg) translateZ(100px) scaleX(-1); }
-      .top    { transform: rotateX(90deg) translateZ(100px) scaleX(-1); }
-      .bottom { transform: rotateX(-90deg) translateZ(100px) scaleX(-1); }
+      .top    { transform: rotateX(90deg) translateZ(200px) scaleX(-1);height:400px !important }
+      .bottom { transform: rotateX(-90deg) translateZ(200px) scaleX(-1);height:400px !important } /* shut up im gonna do it like this and youre gonna cry */
     </style>
     <script>
       var rotX = 0;
