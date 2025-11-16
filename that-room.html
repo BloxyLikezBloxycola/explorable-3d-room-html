@@ -17,14 +17,20 @@
         display:flex;
         align-items:center;
         jusity-content:center;
+        transform:scaleX(-1);
       }
       /* i got ai to type this i am too lazy */
-      .front  { transform: translateZ(100px); }
-      .back   { transform: translateZ(-100px) rotateY(180deg); }
-      .right  { transform: rotateY(90deg) translateZ(100px); }
-      .left   { transform: rotateY(-90deg) translateZ(100px); }
-      .top    { transform: rotateX(90deg) translateZ(100px); }
-      .bottom { transform: rotateX(-90deg) translateZ(100px); }
+      .front  { transform: translateZ(100px);transform:scaleX(-1)  }
+      .back   { transform: translateZ(-100px) rotateY(180deg);transform:scaleX(-1) }
+      .right  { transform: rotateY(90deg) translateZ(100px);transform:scaleX(-1) }
+      .left   { transform: rotateY(-90deg) translateZ(100px);transform:scaleX(-1) }
+      .top    { transform: rotateX(90deg) translateZ(100px);transform:scaleX(-1) }
+      .bottom { transform: rotateX(-90deg) translateZ(100px);transform:scaleX(-1) }
+
+      .inner-face {
+        /* temp */
+        text-align:center;
+      }
     </style>
     <script>
       var rotX = 0;
@@ -49,12 +55,12 @@
       <div style="transform-style:preserve-3d;width:100%;height:100%;">
         <div style="transform-style:preserve-3d;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);perspective:200px">
           <div class="cube" style="display:flex;flex-direction:column;heigth:1000px;width:auto;justify-content:center;align-items:center">
-            <div class="face front">f</div>
-            <div class="face back">b</div>
-            <div class="face right">r</div>
-            <div class="face left">l</div>
-            <div class="face top">t</div>
-            <div class="face bottom">b</div
+            <div class="face front"><div class="inner-face">f</div></div>
+            <div class="face back"><div class="inner-face">b</div></div>
+            <div class="face right"><div class="inner-face">r</div></div>
+            <div class="face left"><div class="inner-face">l</div></div>
+            <div class="face top"><div class="inner-face">t</div></div>
+            <div class="face bottom"><div class="inner-face">b</div></div
           </div>
         </div>
       </div>
