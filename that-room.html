@@ -30,14 +30,13 @@
       var rotY = 0;
 
       document.addEventListener('keydown', function(e) {
-        console.log(e + "istg vro");
-        if (e === "ArrowLeft") {
+        if (e.key === "ArrowLeft") {
           rotX -= 45
-        } else if (e === "ArrowRight") {
+        } else if (e.key === "ArrowRight") {
           rotX += 45
-        } else if (e === "ArrowUp") {
+        } else if (e.key === "ArrowUp") {
           rotY += 45
-        } else if (e === "ArrowDown") {
+        } else if (e.key === "ArrowDown") {
           rotY -= 45
         }
         document.querySelector('.cube').style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
