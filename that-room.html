@@ -31,13 +31,13 @@
 
       document.addEventListener('keydown', function(e) {
         if (e.key === "ArrowLeft") {
-          rotX -= 45
-        } else if (e.key === "ArrowRight") {
-          rotX += 45
-        } else if (e.key === "ArrowUp") {
-          rotY += 45
-        } else if (e.key === "ArrowDown") {
           rotY -= 45
+        } else if (e.key === "ArrowRight") {
+          rotY += 45
+        } else if (e.key === "ArrowUp") {
+          rotX += 45
+        } else if (e.key === "ArrowDown") {
+          rotX -= 45
         }
         document.querySelector('.cube').style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
       });
@@ -46,8 +46,8 @@
   <body>
     <div style="display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%;">
       <div style="transform-style:preserve-3d;width:100%;height:100%;">
-        <div style="transform-style:preserve-3d;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)">
-          <div class="cube" style="display:flex;flex-direction:column;heigth:1000px;width:auto;justify-content:center;align-items:center;perspective:300px">
+        <div style="transform-style:preserve-3d;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);perspective:300px">
+          <div class="cube" style="display:flex;flex-direction:column;heigth:1000px;width:auto;justify-content:center;align-items:center;transform-style:preserve-3d">
             <div class="face front">f</div>
             <div class="face back">b</div>
             <div class="face right">r</div>
