@@ -19,13 +19,16 @@
         justify-content:center;
         transform:scaleX(-1);
       }
+      .top, .bottom {
+        height:400px;
+      }
       /* i got ai to type this i am too lazy */
-      .front  { transform: translateZ(100px) scaleX(-1);  }
-      .back   { transform: translateZ(-100px) rotateY(180deg) scaleX(-1); }
-      .right  { transform: rotateY(90deg) translateZ(100px) scaleX(-1); }
-      .left   { transform: rotateY(-90deg) translateZ(100px) scaleX(-1); }
-      .top    { transform: rotateX(90deg) translateZ(200px) scaleX(-1);height:400px !important }
-      .bottom { transform: rotateX(-90deg) translateZ(200px) scaleX(-1);height:400px !important } /* shut up im gonna do it like this and youre gonna cry */
+      .front  { transform: translateZ(200px) scaleX(-1);  }
+      .back   { transform: translateZ(-200px) rotateY(180deg) scaleX(-1); }
+      .right  { transform: rotateY(90deg) translateZ(200px) scaleX(-1); }
+      .left   { transform: rotateY(-90deg) translateZ(200px) scaleX(-1); }
+      .top    { transform: rotateX(90deg) translateZ(200px) scaleX(-1); }
+      .bottom { transform: rotateX(-90deg) translateZ(200px) scaleX(-1); } 
     </style>
     <script>
       var rotX = 0;
