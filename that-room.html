@@ -30,17 +30,17 @@
       var rotX = 0;
       var rotY = 0;
 
-      cube.keydown(function(e) {
+      document.addEventListener('keydown', function(e) {
         if (e === "ArrowLeft") {
           rotX -= 45
-        } elif (e === "ArrowRight") {
+        } else if (e === "ArrowRight") {
           rotX += 45
-        } elif (e === "ArrowUp") {
+        } else if (e === "ArrowUp") {
           rotY += 45
-        } elif (e === "ArrowDown") {
+        } else if (e === "ArrowDown") {
           rotY -= 45
         }
-        cube.style.transform = "rotateX(${rotX}deg) rotateY(${rotY}deg)";
+        cube.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
       }
     </script>
   </head>
